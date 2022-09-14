@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../context/TransactionProvider";
+import { useTransaction } from "../../hook/useTransaction";
 import "./transaction.css";
 
 const newInput = {
@@ -9,7 +8,7 @@ const newInput = {
     type: "income",
 };
 export const Transactions = () => {
-    const { transactionsList } = useContext(TransactionsContext);
+    const { transactionsList } = useTransaction();
     return (
         <section>
             <table>

@@ -26,7 +26,7 @@ interface TransactionsProviderProps {
     children: ReactNode;
 }
 
-export const TransactionsContext = createContext<TransactionContextData>(
+const TransactionsContext = createContext<TransactionContextData>(
     {} as TransactionContextData
 );
 
@@ -71,4 +71,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
             {children}
         </TransactionsContext.Provider>
     );
+}
+
+export const useTransaction = () => {
+    const context = useContext(TransactionsContext)
+    return context
 }

@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../context/TransactionProvider";
+import { useTransaction } from "../../hook/useTransaction";
 import Logo from "../../assets/Logo.svg";
 
 export const Navbar = () => {
-    const { addTransaction } = useContext(TransactionsContext);
+    const { addTransaction } = useTransaction();
 
     const newInput = {
         title: "web app development - Jason",
