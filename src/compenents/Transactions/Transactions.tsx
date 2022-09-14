@@ -1,15 +1,8 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../context/TransactionProvider";
+import { useTransaction } from "../../hooks/useTransaction";
 import "./transaction.css";
 
-const newInput = {
-    title: "web app development - Carolina",
-    value: "1000.00",
-    category: "development",
-    type: "income",
-};
 export const Transactions = () => {
-    const { transactionsList } = useContext(TransactionsContext);
+    const { transactionsList } = useTransaction();
     return (
         <section>
             <table>
