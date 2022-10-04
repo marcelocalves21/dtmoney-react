@@ -77,8 +77,4 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
 export const useTransaction = () => {
     const context = useContext(TransactionsContext)
     return context
-<<<<<<<< HEAD:src/hooks/useTransaction.tsx
 }
-========
-}
->>>>>>>> fe8f75b087170b9d54037581ca45e1eb96983894:src/hook/useTransaction.tsx
